@@ -2,8 +2,8 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import { Banner } from "./components";
+import { TodoPage, FollowersPage } from "./pages";
 import "./App.css";
-import { TodoPage } from "./pages";
 
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<TodoPage />} />
+          <Route exact path="/followers" element={<FollowersPage />} />
         </Routes>
       </BrowserRouter>
     </div>
