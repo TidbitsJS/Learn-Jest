@@ -3,7 +3,7 @@ import { v4 } from "uuid";
 
 import "./AddInput.css";
 
-const AddInput = ({ setTodos, todos }) => {
+const AddInput = ({ todos, setTodos }) => {
   const [todo, setTodo] = useState("");
 
   const addTodo = () => {
@@ -18,6 +18,7 @@ const AddInput = ({ setTodos, todos }) => {
     setTodos(updatedTodos);
     setTodo("");
   };
+
   return (
     <div className="input-container">
       <input
