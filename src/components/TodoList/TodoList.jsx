@@ -32,6 +32,7 @@ const TodoList = ({ todos, setTodos }) => {
             <div
               className={`todo-item ${todo.completed && "todo-item-active"}`}
               onClick={() => updateTask(todo.id)}
+              key={`${todo} ${index}`}
             >
               {todo.task}
             </div>
