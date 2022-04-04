@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import FollowersList from "../FollowersList";
 
@@ -13,7 +13,20 @@ const MockFollowersList = () => {
 
 describe("FollowersList", () => {
   beforeEach(() => {
+    console.log("RUNS BEFORE EACH TEST");
     jest.mock("../../../__mocks__/axios");
+  });
+
+  beforeAll(() => {
+    console.log("RUNS ONCE BEFORE ALL TESTS");
+  });
+
+  afterEach(() => {
+    console.log("RUNS AFTER EACH TEST");
+  });
+
+  afterAll(() => {
+    console.log("RUNS ONCE AFTER ALL TESTS");
   });
 
   test("should fetch and render input element", async () => {
@@ -26,7 +39,6 @@ describe("FollowersList", () => {
     render(<MockFollowersList />);
 
     const followerDivElement = await screen.findByTestId(`follower-item-0`);
-    screen.debug();
     expect(followerDivElement).toBeInTheDocument();
   });
 });
