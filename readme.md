@@ -4,9 +4,11 @@ Purpose of the project is to learn how to write tests with JavaScript Testing fr
 
 ## Setup
 
-git
-NodeJS
-npm
+Project requirements
+
+* git
+* NodeJS
+* npm
 
 To verify the installation of above, you can run this:
 
